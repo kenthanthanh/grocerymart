@@ -1,5 +1,5 @@
 .header {
-    background: rgba(238, 238, 238, 1);
+    background: var(--header-bg);
     padding: 30px 0;
 }
 .top-bar {
@@ -40,8 +40,8 @@
         display: flex;
         align-items: center;
         border-radius: 8px;
-        background: #fff;
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        background: var(--top-act__group-bg);
+        box-shadow: 0px 20px 60px 10px var(--top-act__group-shadow);
     }
 
     &__btn {
@@ -62,7 +62,7 @@
     &__separate {
         width: 1px;
         height: 30px;
-        background: #ededf6;
+        background: var(--top-act-separate);
     }
 
     &__avt {
@@ -72,7 +72,7 @@
         height: 50px;
         border-radius: 8px;
 
-        box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 4px 14px 2px var(--top-act-avt-shadow);
         object-fit: cover;
     }
 }

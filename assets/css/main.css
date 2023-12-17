@@ -55,11 +55,6 @@ table {
   box-sizing: border-box;
 }
 
-:root {
-  --text-color: #1A162E;
-  --icon-color: brightness(0) saturate(100%) invert(5%) sepia(40%) saturate(2682%) hue-rotate(231deg) brightness(99%) contrast(92%);
-}
-
 html {
   font-size: 62.5%;
 }
@@ -1121,8 +1116,28 @@ button {
     --grid-gutter-y: 90px;
   }
 }
+html.dark {
+  --text-color: #FFFFFF;
+  --icon-color: brightness(0) saturate(100%) invert(99%) sepia(46%) saturate(0%) hue-rotate(9deg) brightness(116%) contrast(100%);
+  --header-bg:#171C28;
+  --top-act__group-bg: #292E39;
+  --top-act__group-shadow:rgba(0, 0, 0, 0.20);
+  --top-act-separate: #ededf6;
+  --top-act-avt-shadow:rgba(0, 0, 0, 0.08);
+}
+
+:root {
+  --text-color: #1A162E;
+  --icon-color: brightness(0) saturate(100%) invert(5%) sepia(40%) saturate(2682%) hue-rotate(231deg) brightness(99%) contrast(92%);
+  --header-bg:rgba(238, 238, 238, 1);
+  --top-act__group-bg: #fff;
+  --top-act__group-shadow:rgba(237, 237, 246, 0.2);
+  --top-act-separate: #ededf6;
+  --top-act-avt-shadow:rgba(0, 0, 0, 0.08);
+}
+
 .header {
-  background: rgb(238, 238, 238);
+  background: var(--header-bg);
   padding: 30px 0;
 }
 
@@ -1163,8 +1178,8 @@ button {
   display: flex;
   align-items: center;
   border-radius: 8px;
-  background: #fff;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--top-act__group-bg);
+  box-shadow: 0px 20px 60px 10px var(--top-act__group-shadow);
 }
 .top-act__btn {
   display: flex;
@@ -1184,7 +1199,7 @@ button {
 .top-act__separate {
   width: 1px;
   height: 30px;
-  background: #ededf6;
+  background: var(--top-act-separate);
 }
 .top-act__avt {
   cursor: pointer;
@@ -1192,7 +1207,7 @@ button {
   width: 50px;
   height: 50px;
   border-radius: 8px;
-  box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4px 14px 2px var(--top-act-avt-shadow);
   object-fit: cover;
 }
 
@@ -1202,8 +1217,6 @@ button {
   gap: 14px;
 }
 .logo__title {
-  color: #1A162E;
-  /* Bold 22 */
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.45; /* 145.455% */
