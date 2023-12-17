@@ -55,6 +55,11 @@ table {
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #1A162E;
+  --icon-color: brightness(0) saturate(100%) invert(5%) sepia(40%) saturate(2682%) hue-rotate(231deg) brightness(99%) contrast(92%);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -62,6 +67,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
+  color: var(--text-color);
 }
 
 a {
@@ -69,10 +75,19 @@ a {
   text-decoration: none;
 }
 
+button, input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+}
+
 button {
   border: none;
   outline: none;
   background: transparent;
+}
+
+.icon {
+  filter: var(--icon-color);
 }
 
 .row > *, .container-fluid, .container {
@@ -1126,7 +1141,6 @@ button {
   gap: 30px;
 }
 .navbar__link {
-  color: #1A162E;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1149,7 +1163,7 @@ button {
   display: flex;
   align-items: center;
   border-radius: 8px;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 }
 .top-act__btn {
@@ -1157,12 +1171,12 @@ button {
   align-items: center;
   gap: 10px;
   padding: 13px 20px;
+  cursor: pointer;
 }
 .top-act__group--single .top-act__btn {
   padding: 13px;
 }
 .top-act__title {
-  color: #1A162E;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.5; /* 146.667% */
@@ -1170,9 +1184,10 @@ button {
 .top-act__separate {
   width: 1px;
   height: 30px;
-  background: #EDEDF6;
+  background: #ededf6;
 }
 .top-act__avt {
+  cursor: pointer;
   display: block;
   width: 50px;
   height: 50px;
