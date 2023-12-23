@@ -5,8 +5,8 @@
     align-items: center;
     gap: 14px;
     // @include abstracts.breakpoint(lg) {
-    gap: 10px;
-    margin-left: 40px;
+    // gap: 10px;
+    // margin-left: 40px;
     // }
     // @include abstracts.breakpoint(md) {
     //     margin-left: 0;
@@ -21,9 +21,9 @@
         //     margin-left: 0;
         // }
     }
-    &__img {
+    // &__img {
         // @include abstracts.breakpoint(lg) {
-        width: 24px;
-        // }
-    }
+            // width: 24px;
+            // }
+    // }
 }
