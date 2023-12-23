@@ -20,5 +20,12 @@ line-height: 1.43; /* 142.857% */
     justify-content: center;
     border-radius: 50%;
     box-shadow: 0px 20px 60px var(--like-btn-shadow);
+
+    &:not(.liked) .like-btn__icon--liked{
+        display: none;
+    }
+    &.liked .like-btn__icon{
+        display: none;
+    }
  
 }
