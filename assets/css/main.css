@@ -1502,6 +1502,9 @@ html.dark {
 .like-btn.liked .like-btn__icon {
   display: none;
 }
+.like-btn__icon--liked {
+  margin-top: 6px;
+}
 
 .product-card {
   padding: 16px;
