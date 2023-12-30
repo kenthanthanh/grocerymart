@@ -34,6 +34,11 @@ line-height: 1.43; /* 142.857% */
 }
 // Buttons
 .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
     padding: 0 20px;
     height: 46px;
     background: #f8f8fb;
@@ -44,8 +49,9 @@ line-height: 1.43; /* 142.857% */
     line-height: 1.47; /* 146.667% */
     text-align: center;
 +.btn{
-    margin-left: 20px;
-}
+ &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }}
 &__text{
     color: #9c9da8;
     background: transparent;
