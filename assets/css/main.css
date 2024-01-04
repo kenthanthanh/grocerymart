@@ -2041,6 +2041,19 @@ html.dark {
   display: none;
 }
 
+.message {
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+}
+.message-success {
+  background: rgba(39, 243, 117, 0.2);
+  border: 1.5px solid #46a05c;
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2072,6 +2085,10 @@ html.dark {
   align-items: center;
   justify-content: center;
   gap: 50px;
+}
+.auth__intro-img {
+  width: var(--width);
+  max-width: 100%;
 }
 .auth__intro-text {
   max-width: 412px;
@@ -2110,6 +2127,9 @@ html.dark {
   width: 100%;
   margin-top: 30px;
 }
+.auth__form-forgot {
+  margin-top: 10px;
+}
 .auth__link {
   color: #0071dc;
   font-size: 1.5rem;
@@ -2130,6 +2150,12 @@ html.dark {
   color: #9e9da8;
   font-size: 1.8rem;
   line-height: 144.444%;
+}
+.auth__text-forgot {
+  margin-top: 50px;
+}
+.auth__message {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
