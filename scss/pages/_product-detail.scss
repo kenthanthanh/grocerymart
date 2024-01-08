@@ -1,0 +1,197 @@
+.product-page {
+
+    background: var(--product-detail-bg);
+}
+
+.product-container {
+    margin-top: 30px;
+}
+
+.product-preview {
+    padding: 0 30px;
+    &__list {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        flex-shrink: 0;
+        padding-top: 92%;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__thumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 30px;
+
+        &-img {
+            height: 65px;
+            width: 65px;
+            object-fit: contain;
+            border: 1.5px solid rgba(158, 157, 168, 0.3);
+            border-radius: 8px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity, border-color 0.3s;
+            &:hover {
+                opacity: 1;
+                border-color: rgba(158, 157, 168, 1);
+            }
+            &__current {
+                opacity: 1;
+                border-color: #ffb700;
+            }
+        }
+    }
+}
+
+.product-info {
+    padding: 60px;
+    background: var(--product-info__bg);
+
+    &__heading {
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 1.38; /* 138.462% */
+        margin-bottom: 30px;
+    }
+    &__cta {
+        margin-left: 30px;
+    }
+    &__card {
+        border-radius: 6px;
+        border: 1px solid var(--product-card-border);
+        padding: 20px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__price {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5; /* 150% */
+    }
+    &__tax {
+        padding: 2px 8px;
+        background: rgba(103, 176, 68, 0.2);
+
+        color: #67b044;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.42; /* 142.857% */
+    }
+    &__total {
+        font-size: 2.6rem;
+        font-weight: 500;
+        line-height: 1.38; /* 138.462% */
+    }
+    &__btn {
+        flex: 1;
+        // padding: 0 55px;
+    }
+    &__like-btn {
+        margin-left: 10px;
+        border: 1px solid var(--product-info__like-btn__border);
+        border-radius: 6px;
+        height: 46px;
+        width: 46px;
+        background: transparent;
+    }
+}
+.product-form {
+    margin-top: 30px;
+    &__tag {
+        background: var(--product-form__tag__bg);
+    }
+}
+.product-props {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.product-prop {
+    display: flex;
+
+    gap: 16px;
+    &__icon {
+        align-self: flex-start;
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.42; /* 142.857% */
+    }
+}
+.product-tab {
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0 -30px;
+    }
+    &__item {
+        color: var(--product-tab__item__color);
+
+        padding: 0 30px;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45; /* 145.455% */
+        user-select: none;
+        white-space: nowrap;
+        &--current {
+            color: inherit;
+        }
+        &:hover {
+            color: inherit;
+        }
+        &:not(&--current) {
+            cursor: pointer;
+        }
+    }
+    &__contents {
+        padding-top: 30px;
+    }
+    &__content {
+        display: none;
+    }
+    &__content--current {
+        display: block;
+    }
+}
+.product-content{
+    &__heading {
+        padding-bottom: 30px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41; /* 141.667% */
+    }
+    &__review{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

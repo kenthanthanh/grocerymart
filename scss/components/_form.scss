@@ -125,6 +125,57 @@ $error-color: #ed4337;
         }
     
     }
+    &__label {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45;
+    }
+    &__select-wrap {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 45px;
+        padding: 5px 0;
+        border-radius: 6px;
+        border: 1px solid var(--form__select-wrap-border);
+    }
+    
+    &__select {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 14px;
+        min-width: var(--width, 108px);
+        height: 100%;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42; /* 142.857% */
+        cursor: pointer;
+    }
+    &__select + &__select {
+        border-left: 1px solid var(--filter__col-border);
+    }
+    &__tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+    &__tag {
+        padding: 6px 12px;
+        border-radius: 6px;
+        background: var(--form__tag-bg);
+        color: var(--form__tag-color);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.43; /* 142.857% */
+        transition: color 0.2s;
+        &:hover {
+            color: var(--text-color);
+        }
+    }
 }
 
 .d-none{

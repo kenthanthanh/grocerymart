@@ -18,6 +18,12 @@
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
     }
+     // Header
+     --header-act-dropdown-bg: #fff;
+     --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+     --header-act-dropdown-border-color: #d2d1d6;
+
+ 
     // Dropdown
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
@@ -38,9 +44,9 @@
     --filter-form-slider-bg: #D2D1D6;
     --filter-form-slider-border: #ffb700;
     // Col2
-    --filter-form-select-wrap-border: #D2D1D6;
---filter-form-tag-bg: #F8F8FB;
---filter-form-tag-color: #9E9DA8;
+    --form__select-wrap-border: #D2D1D6;
+--form__tag-bg: #F8F8FB;
+--form__tag-color: #9E9DA8;
     --filter__col-border: #eee;
     --filter-form-search-color: #9E9DA8;
     --filter-form-search-border: #D2D1D6;
@@ -61,4 +67,18 @@
   // Breadcrumbs
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
+
+
+
+//   Product detail
+--product-form__tag__bg: #EDEDF6;
+--product-info__bg:#F6F6F6;
+--product-card-border: #B9BABE;
+--product-info__like-btn__border: #D2D1D6;
+
+// Product-tab
+--product-tab__item__color: #9E9DA8;
+
+// Review card
+--review-card-bg: #FAFAFD;
 }
