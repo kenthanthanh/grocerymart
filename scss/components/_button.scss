@@ -43,17 +43,24 @@ line-height: 1.43; /* 142.857% */
     height: 46px;
     background: #f8f8fb;
     border-radius: 6px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.47; /* 146.667% */
     text-align: center;
+    white-space: nowrap;
+    user-select: none;
+
+    &--small {
+        height: 40px;
+        padding: 0 16px;
+    }
 +.btn{
  &:not(.btn--no-margin) {
             margin-left: 20px;
         }}
 &__text{
-    color: #9c9da8;
+    // color: #9c9da8;
     background: transparent;
     font-weight: 400;
 
