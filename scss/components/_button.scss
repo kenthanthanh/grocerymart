@@ -78,6 +78,11 @@ line-height: 1.43; /* 142.857% */
 &__round{
 border-radius: 99px;
 }
+&--danger {
+    color: #fff;
+    background: #ed4337;
+}
+
 &[disabled],
 &__disabled{
     opacity: 0.5;
