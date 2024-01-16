@@ -25,17 +25,39 @@
     background: #fff;
     box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
 
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+    }
     &__heading {
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
+        &--lv2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+        }
     }
+
 
     &__sub-heading {
         margin: 30px 0;
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+    }
+    &__desc {
+        margin-top: 6px;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
+
+    &__form {
+        margin-bottom: 30px;
     }
     &__list {
         margin-top: -30px;
@@ -99,6 +121,38 @@
     &__next-btn {
         margin-top: 30px;
     }
+    &__edit-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.8rem;
+        line-height: 144.444%;
+    }
+
+    &__checkbox {
+        &-input {
+            appearance: none;
+
+            &::before {
+                content: url("../icons/checkbox-uncheck.svg");
+            }
+
+            &:not(:checked)::before {
+                filter: var(--icon-color);
+            }
+
+            &:checked::before {
+                content: url("../icons/checkbox-checked.svg");
+            }
+        }
+    }
+    &__form-row {
+        flex-direction: row;
+        gap: 20px;
+    }
+    &__check-all {
+        margin: 30px 0;
+    }
 }
 
 .cart-info + .cart-info {
@@ -107,7 +161,6 @@
 
 .cart-item {
     display: flex;
-    gap: 30px;
     padding: 30px 0;
     border-bottom: 1px solid #d2d1d6;
 
@@ -115,6 +168,8 @@
         width: 172px;
         height: 172px;
         object-fit: contain;
+        margin: 0 30px 0 20px;
+
     }
 
     &__content {
@@ -149,6 +204,11 @@
 
     &__status {
         color: #67b044;
+    }
+    &__ctrl-wrap {
+        display: flex;
+        align-items: center;
+        gap: 30px;
     }
 
     &__ctrl {
@@ -195,6 +255,9 @@
         &:first-child {
             margin-right: 10px;
         }
+    }
+    &__checkout-btn {
+        margin-top: auto;
     }
 }
 .gift-item {
@@ -305,29 +368,84 @@
         display: flex;
         align-items: flex-end;
 
-        &-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            line-height: 144.444%;
-        }
+        // &-btn {
+        //     display: flex;
+        //     align-items: center;
+        //     gap: 10px;
+        //     font-size: 1.8rem;
+        //     line-height: 144.444%;
+        // }
     }
+
+}
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--checkout-payment-item-bg);    
+    &--pointer {
+        cursor: pointer;
+    }
+    &__thumb {
+        width: 70px;
+        height: 54px;
+        object-fit: cover;
+    }
+            &__content {
+
+   display: flex;
+        align-items: center;
+        gap: 20px;
+        flex: 1;            }
+
+
+        &__info{
+            flex: 1;
+        }
+
+            &__title {
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 144.444%;
+            }
+
+        
+    &__desc,
+    &__detail {
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
+
+    &__desc {
+        margin-top: 4px;
+    }
+
+    &__detail {
+        margin-right: -8px;
+        padding: 8px;
+        color: #0071dc;
+    }
+
     &__checkbox {
-        &-input {
-            appearance: none;
-
-            &::before {
-                content: url("../icons/checkbox-unchecked.svg");
-            }
-
-            &:not(:checked)::before {
-                filter: var(--icon-color);
-            }
-
-            &:checked::before {
-                content: url("../icons/checkbox-checked.svg");
-            }
-        }
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 14px;
     }
+
+    &__checkbox-input:checked + &__cost {
+        color: inherit;
+    }
+
+    &__cost {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+        color: #9e9da8;
+}
+
 }
