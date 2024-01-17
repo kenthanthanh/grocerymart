@@ -116,9 +116,9 @@ $gutters: (
 @include make-offsets();
 
 @include make-gutters();
-@each $breakpoint, $dimension in $grid-breakpoints {
-    $max-width: map-get($container-max-widths, $breakpoint);
-    $infix: ("-#{$breakpoint}");
+@each $screen, $dimension in $grid-breakpoints {
+    $max-width: map-get($container-max-widths, $screen);
+    $infix: ("-#{$screen}");
 
     @include make-media-query($dimension) {
         .container {
