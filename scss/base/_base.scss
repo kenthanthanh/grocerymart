@@ -1,3 +1,4 @@
+@use "../abstracts";
 *,
 ::before, 
 ::after{
@@ -42,6 +43,12 @@ input{
     filter: var(--icon-color);
 }
 
+.container {
+    @include abstracts.screen(sm) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
 i,
 em {
     font-style: italic;
@@ -56,11 +63,11 @@ strong {
     height: 1px;
     background: #d2d1d6;
 }
-.hide{
-    opacity: 0;
-    visibility: hidden;
-}
-.show{
-    opacity: 1;
-    visibility: visible;
-}
+// .hide{
+//     opacity: 0;
+//     visibility: hidden;
+// }
+// .show{
+//     opacity: 1;
+//     visibility: visible;
+// }
