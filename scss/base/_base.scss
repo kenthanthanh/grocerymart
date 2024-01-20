@@ -20,6 +20,7 @@ a{
     color: inherit;
     text-decoration: none;
 }
+a,img,
 button, input, textarea,select {
     font-family: inherit;
     color: inherit;
@@ -54,4 +55,12 @@ strong {
     margin: var(--margin) 0;
     height: 1px;
     background: #d2d1d6;
+}
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+.show{
+    opacity: 1;
+    visibility: visible;
 }
