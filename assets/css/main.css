@@ -3585,6 +3585,7 @@ html.dark {
   background: #f6f6f6;
 }
 .account-info__icon {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3602,6 +3603,9 @@ html.dark {
   margin-top: 6px;
   font-size: 1.4rem;
   line-height: 142.857%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .favourite-item {
@@ -4005,6 +4009,7 @@ html.dark {
   background: var(--profile-sidebar-link-hover);
 }
 .profile-menu__icon {
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
