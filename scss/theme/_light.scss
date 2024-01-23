@@ -49,13 +49,21 @@
     --filter-form-slider-bg: #D2D1D6;
     --filter-form-slider-border: #ffb700;
     // Col2
+
     --form__select-wrap-border: #D2D1D6;
 --form__tag-bg: #F8F8FB;
 --form__tag-color: #9E9DA8;
-    --filter__col-border: #eee;
-    --filter-form-search-color: #9E9DA8;
-    --filter-form-search-border: #D2D1D6;
 
+
+--filter__col-border: #eee;
+--filter-form-search-color: #9E9DA8;
+--filter-form-search-border: #D2D1D6;
+
+// Forms
+--form-placeholder-color: #d2d1d6;
+--form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+--form-select-dialog-bg: #fff;
+--form-option-hover-bg: #ebebeb;
 
     // Like-btn
     --like-btn-shadow: rgba(124, 124, 124, 0.20)
@@ -88,9 +96,9 @@
 --review-card-bg: #FAFAFD;
 
 
-    // model
-    --model-bg: #fff;
-    --model-shadow: rgba(237, 237, 246, 0.2);
+    // modal
+    --modal-bg: #fff;
+    --modal-shadow: rgba(237, 237, 246, 0.2);
 
     // Text contetn 
     --text-content-hr-bg: #ebebeb;

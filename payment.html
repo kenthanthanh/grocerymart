@@ -319,30 +319,30 @@
         </script>
 
         <!-- Modal: confirm remove shopping cart item -->
-        <div id="delete-confirm" class="model model--small hide">
-            <div class="model__content">
-                <p class="model__text">Do you want to remove this item from shopping cart?</p>
-                <div class="model__bottom">
-                    <button class="btn btn__small btn__outline model__btn js-toggle" toggle-target="#delete-confirm">
+        <div id="delete-confirm" class="modal modal--small hide">
+            <div class="modal__content">
+                <p class="modal__text">Do you want to remove this item from shopping cart?</p>
+                <div class="modal__bottom">
+                    <button class="btn btn__small btn__outline modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
                     </button>
                     <button
-                        class="btn btn__small btn__danger btn__primary model__btn btn__no-margin js-toggle"
+                        class="btn btn__small btn__danger btn__primary modal__btn btn__no-margin js-toggle"
                         toggle-target="#delete-confirm"
                     >
                         Delete
                     </button>
                 </div>
             </div>
-            <div class="model__overlay js-toggle" toggle-target="#delete-confirm"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
         </div>
 
         <!-- Modal: address new shipping address -->
-        <div id="add-new-address" class="model hide" style="--content-width: 650px">
-            <div class="model__content">
+        <div id="add-new-address" class="modal hide" style="--content-width: 650px">
+            <div class="modal__content">
                 <form action="" class="form">
-                    <h2 class="model__heading">Add new shipping address</h2>
-                    <div class="model__body">
+                    <h2 class="modal__heading">Add new shipping address</h2>
+                    <div class="modal__body">
                         <div class="form__row">
                             <div class="form__group">
                                 <label for="name" class="form__label form__label--small">Name</label>
@@ -466,15 +466,15 @@
                             </label>
                         </div>
                     </div>
-                    <div class="model__bottom">
-                        <button class="btn btn__small btn__text model__btn js-toggle" toggle-target="#add-new-address">
+                    <div class="modal__bottom">
+                        <button class="btn btn__small btn__text modal__btn js-toggle" toggle-target="#add-new-address">
                             Cancel
                         </button>
-                        <button class="btn btn__small btn__primary model__btn btn__no-margin">Create</button>
+                        <button class="btn btn__small btn__primary modal__btn btn__no-margin">Create</button>
                     </div>
                 </form>
             </div>
-            <div class="model__overlay"></div>
+            <div class="modal__overlay"></div>
         </div>
     </body>
 </html>
