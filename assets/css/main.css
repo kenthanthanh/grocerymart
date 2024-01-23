@@ -3946,6 +3946,7 @@ html.dark {
   margin-top: 30px;
 }
 .profile__sidebar {
+  height: 100%;
   padding-bottom: 30px;
   border-radius: 20px;
   background: var(--profile-sidebar-bg);
