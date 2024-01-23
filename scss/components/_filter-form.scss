@@ -1,3 +1,4 @@
+@use "../abstracts";
 .filter-wrap {
     position: relative;
     z-index: 1;
@@ -12,11 +13,33 @@
     top: 48px;
     right: 0;
     transition: opacity, visibility;
-    transition-duration: 0.5;
-    &.hide{
+    transition-duration: 0.2s;
+    filter: drop-shadow(0px 40px 90px var(--filter-shadow));
+
+
+    @include abstracts.screen(xl) {
+        height: calc(100vh - 80px);
+        padding-bottom: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    @include abstracts.screen(sm) {
+        width: 85vw;
+    }
+
+    &.hide {
         opacity: 0;
         visibility: hidden;
     }
+    &__arrow {
+        position: absolute;
+        top: -15px;
+        right: 24px;
+        height: 20.5px;
+        filter: var(--filter-form-arrow);
+    }
+
     &::before{
         content: "";
         position: absolute;
@@ -37,9 +60,24 @@
     &__form {
         margin-top: 30px;
       
+        &-label {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+            &--small {
+                margin-bottom: 10px;
+                font-size: 1.4rem;
+                line-height: 142.857%;
+            }
+        }
         // Col1
         &-group {
             margin-top: 20px;
+            &--inline {
+                display: flex;
+                gap: 30px;
+            }
             &__slider{
                 padding: 9px 0;
             }
@@ -68,6 +106,28 @@
             }
             &::after {
                 left: var(--max-value);
+            }
+        }
+        &-text-input,
+        &-select-wrap {
+            border-radius: 6px;
+            border: 1px solid #d2d1d6;
+        }
+        &-text-input {
+            display: flex;
+            align-items: center;
+            width: 334px;
+            height: 44px;
+            padding: 0 16px;
+            overflow: hidden;
+            &--small {
+                width: 121px;
+                height: 36px;
+                padding: 0 12px;
+            }
+
+            @include abstracts.screen(sm) {
+                width: 100%;
             }
         }
         &-group__inline {

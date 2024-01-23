@@ -91,6 +91,7 @@ button {
 }
 
 input {
+  background: transparent;
   outline: none;
   border: none;
 }
@@ -2234,6 +2235,7 @@ html.dark {
 }
 .btn__primary {
   background: #FFB700;
+  color: #171c28;
 }
 .btn__outline {
   background: transparent;
@@ -2334,11 +2336,32 @@ html.dark {
   top: 48px;
   right: 0;
   transition: opacity, visibility;
-  transition-duration: 0.5;
+  transition-duration: 0.2s;
+  filter: drop-shadow(0px 40px 90px var(--filter-shadow));
+}
+@media (max-width: 1199.98px) {
+  .filter {
+    height: calc(100vh - 80px);
+    padding-bottom: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+@media (max-width: 575.98px) {
+  .filter {
+    width: 85vw;
+  }
 }
 .filter.hide {
   opacity: 0;
   visibility: hidden;
+}
+.filter__arrow {
+  position: absolute;
+  top: -15px;
+  right: 24px;
+  height: 20.5px;
+  filter: var(--filter-form-arrow);
 }
 .filter::before {
   content: "";
@@ -2359,8 +2382,23 @@ html.dark {
 .filter__form {
   margin-top: 30px;
 }
+.filter__form-label {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.filter__form-label--small {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  line-height: 142.857%;
+}
 .filter__form-group {
   margin-top: 20px;
+}
+.filter__form-group--inline {
+  display: flex;
+  gap: 30px;
 }
 .filter__form-group__slider {
   padding: 9px 0;
@@ -2388,6 +2426,28 @@ html.dark {
 }
 .filter__form-slider::after {
   left: var(--max-value);
+}
+.filter__form-text-input, .filter__form-select-wrap {
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+}
+.filter__form-text-input {
+  display: flex;
+  align-items: center;
+  width: 334px;
+  height: 44px;
+  padding: 0 16px;
+  overflow: hidden;
+}
+.filter__form-text-input--small {
+  width: 121px;
+  height: 36px;
+  padding: 0 12px;
+}
+@media (max-width: 575.98px) {
+  .filter__form-text-input {
+    width: 100%;
+  }
 }
 .filter__form-group__inline {
   display: flex;
@@ -2480,16 +2540,17 @@ html.dark {
   border-color: #ed4337;
   background: rgba(237, 67, 55, 0.1);
 }
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error,
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon-error {
   display: block;
 }
-.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
-  display: none;
-}
 .form__text-area, .form__text-input {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 12px;
   border-radius: 10px;
   border: 1px solid #d2d1d6;
@@ -2509,9 +2570,13 @@ html.dark {
   resize: none;
 }
 .form__text-input {
-  height: 50px;
+  position: relative;
+  height: 48px;
 }
-height .form__text-input--small__error {
+.form__text-input--small {
+  height: 42px;
+}
+.form__error {
   text-align: left;
   font-size: 1.4rem;
   font-weight: 500;
@@ -2519,52 +2584,52 @@ height .form__text-input--small__error {
   color: #ed4337;
   display: none;
 }
-.form__text-input--small__input-icon-error {
+.form__input-icon-error {
   display: none;
   margin-left: 12px;
   animation: shake 0.5s;
 }
-.form__text-input--small__input, .form__text-input--small__text-area-input {
+.form__input, .form__text-area-input {
   flex: 1;
   height: 100%;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
-.form__text-input--small__input::placeholder, .form__text-input--small__text-area-input::placeholder {
+.form__input::placeholder, .form__text-area-input::placeholder {
   color: #d2d1d6;
 }
-.form__text-input--small__input-icon {
+.form__input-icon {
   margin-left: 12px;
 }
-.form__text-input--small__pull-right {
+.form__pull-right {
   margin-left: auto;
 }
-.form__text-input--small__checkbox {
+.form__checkbox {
   display: flex;
   align-items: center;
   gap: 10px;
   user-select: none;
   position: absolute;
 }
-.form__text-input--small__checkbox-label {
+.form__checkbox-label {
   margin-left: 29px;
   color: #9e9da8;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
 }
-.form__text-input--small__checkbox::before, .form__text-input--small__checkbox::after {
+.form__checkbox::before, .form__checkbox::after {
   content: "";
   position: absolute;
 }
-.form__text-input--small__checkbox::before {
+.form__checkbox::before {
   width: 19px;
   height: 19px;
   border-radius: 5px;
   border: 1px solid #9e9da8;
 }
-.form__text-input--small__checkbox:has(:checked)::after {
+.form__checkbox:has(:checked)::after {
   width: 15px;
   height: 8px;
   border: 3px solid;
@@ -2573,28 +2638,28 @@ height .form__text-input--small__error {
   left: 2px;
   top: 5px;
 }
-.form__text-input--small__checkbox:has(:checked)::before {
+.form__checkbox:has(:checked)::before {
   border-color: #ffb700;
   background: #ffb700;
 }
-.form__text-input--small__label {
+.form__label {
   display: block;
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.45;
 }
-.form__text-input--small--medium {
+.form--medium {
   margin-bottom: 20px;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
-.form__text-input--small--small {
+.form--small {
   margin-bottom: 10px;
   font-size: 1.4rem;
   line-height: 142.857%;
 }
-.form__text-input--small__select-wrap {
+.form__select-wrap {
   display: flex;
   align-items: center;
   width: 100%;
@@ -2603,7 +2668,7 @@ height .form__text-input--small__error {
   border-radius: 6px;
   border: 1px solid var(--form__select-wrap-border);
 }
-.form__text-input--small__select {
+.form__select {
   flex: 1;
   display: flex;
   align-items: center;
@@ -2616,16 +2681,16 @@ height .form__text-input--small__error {
   line-height: 1.42; /* 142.857% */
   cursor: pointer;
 }
-.form__text-input--small__select + .form__text-input--small__select {
+.form__select + .form__select {
   border-left: 1px solid var(--filter__col-border);
 }
-.form__text-input--small__tags {
+.form__tags {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px 20px;
 }
-.form__text-input--small__tag {
+.form__tag {
   padding: 6px 12px;
   border-radius: 6px;
   background: var(--form__tag-bg);
@@ -2635,7 +2700,7 @@ height .form__text-input--small__error {
   line-height: 1.43; /* 142.857% */
   transition: color 0.2s;
 }
-.form__text-input--small__tag:hover {
+.form__tag:hover {
   color: var(--text-color);
 }
 

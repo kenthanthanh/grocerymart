@@ -77,7 +77,7 @@
                 <section class="home__container">
                     <div class="home__row">
                         <h2 class="home__heading">Browse Categories</h2>
-                    </div>                    <div class="home__cate row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
+                    </div>                    <div class="home__cate row row-cols-3 row-cols-lg-2 row-cols-sm-1 g-3">
                         <!-- Cate 1 -->
                         <div class="col">
                             <a href="#!">
@@ -131,7 +131,7 @@
                             <div id="home-filter" class="filter hide">
                                 <h3 class="filter__heading">Filter</h3>
                                 <form action="" class="filter__form">
-                                    <div class="filter__row">
+                                    <div class="filter__row  filter__content">
                                         <div class="filter__col">
                                             <label for="" class="filter__form-label">Price</label>
                                             <div class="filter__form-group filter__form-group__slider">
@@ -193,9 +193,15 @@
                                         </div>
                                     </div>
                                     <div class="filter__row filter__footer">
-                                        <button class="btn btn__text filter__cancel">Cancel</button>
-                                        <button class="btn btn__primary filter__submit">Show Result</button>
-
+                                        <button class="btn btn__text filter__cancel js-toggle" toggle-target="#home-filter">
+                                            Cancel
+                                        </button>
+                                        <button
+                                            class="btn btn__primary filter__submit js-toggle"
+                                            toggle-target="#home-filter"
+                                        >
+                                            Show Result
+                                        </button>
                                     </div>
 
                                 </form>
