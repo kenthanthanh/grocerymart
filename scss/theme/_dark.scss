@@ -2,41 +2,40 @@
 
 html.dark {
     --text-color: #fff;
-    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
-        contrast(99%);
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
 
-        --bg: #292e39;
-        // Header
-        --header-bg: #171c28;
-        --header-act-dropdown-bg: #2f3441;
-        --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
-        --header-act-dropdown-border: transparent;
-        --header-act-dropdown-separate: #292e39;
-        ;
-        @include abstracts.screen(lg) {
-            --header-shadow: rgba(0, 0, 0, 0.2);
-        }
-        --top-act__group-bg: #292e39;
-        --top-act__group-shadow: rgba(0, 0, 0, 0.2);
-        --top-act-group-separate: #545458;
-        --top-act-avt-shadow:rgba(0, 0, 0, 0.08);
-        // --top-act-separate:#171C28;
+    --bg: #292e39;
+    // Header
+    --header-bg: #171c28;
+    --header-act-dropdown-bg: #2f3441;
+    --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+    --header-act-dropdown-border: transparent;
+    --header-act-dropdown-separate: #292e39;
+    ;
 
-        
-        
-        // Footer
-        --footer-bg: var(--header-bg);
-        --footer-text: #9e9da6;
-        
-        
-        // Dropdown
-        --dropdown-bg: #2f3441;
+    @include abstracts.screen(lg) {
+        --header-shadow: rgba(0, 0, 0, 0.2);
+    }
+
+    --top-act__group-bg: #292e39;
+    --top-act__group-shadow: rgba(0, 0, 0, 0.2);
+    --top-act-group-separate: #545458;
+    --top-act-avt-shadow:rgba(0, 0, 0, 0.08);
+    // --top-act-separate:#171C28;
+
+
+
+    // Footer
+    --footer-bg: var(--header-bg);
+    --footer-text: #9e9da6;
+
+
+    // Dropdown
+    --dropdown-bg: #2f3441;
     --dropdown-shadow: rgba(23, 28, 40, 0.4);
-    --dropdown-arrow: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
-        brightness(89%) contrast(88%);
+    --dropdown-arrow: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg) brightness(89%) contrast(88%);
     // --top-menu-border: #171c28;
-    --menu-column-icon: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg)
-        brightness(107%) contrast(96%);
+    --menu-column-icon: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg) brightness(107%) contrast(96%);
 
     // Sidebar
     --sidebar-bg: #292e39;
@@ -55,18 +54,18 @@ html.dark {
     --product-card-bg: #171c28;
     --product-card-shadow: rgba(0, 0, 0, 0.2);
 
-     // Categery-item 
-     --cate-item-bg: #171C28;
-     --cate-item__img-bg: #292E39;
-     --cate-item-title: #fff;
+    // Categery-item 
+    --cate-item-bg: #171C28;
+    --cate-item__img-bg: #292E39;
+    --cate-item-title: #fff;
 
 
-     
+
     // Filter form
     --filter-bg: var(--dropdown-bg);
     --filter-shadow: rgba(0, 0, 0, 0.4);
     --filter-form-slider-border: #ffb700;
-// 
+    // 
     --form-tag-bg: #171c28;
     --filter-form-arrow: var(--dropdown-arrow);
 
@@ -82,10 +81,10 @@ html.dark {
     --form-select-dialog-bg: #2f3441;
     --form-option-hover-bg: #292e39;
 
-// Custom form checkbox
+    // Custom form checkbox
     // --form-checkbox__checked-border: #d2d1d6;
---form-checkbox-border: #67B044;
---form-checkbox-bg: #67B044;
+    --form-checkbox-border: #67B044;
+    --form-checkbox-bg: #67B044;
 
     // Product detail
     --product-form__tag__bg: #292E39;
@@ -124,8 +123,8 @@ html.dark {
     --checkout-payment-item-bg: #292e39;
 
     // Cart-info 
---cart-info-bg: #171C28;
---cart-info-shadow: rgba(23, 28, 40, 0.20);
+    --cart-info-bg: #171C28;
+    --cart-info-shadow: rgba(23, 28, 40, 0.20);
 
 
     // Modal

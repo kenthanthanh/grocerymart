@@ -1262,8 +1262,7 @@ strong {
 }
 html.dark {
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
-      contrast(99%);
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
   --bg: #292e39;
   --header-bg: #171c28;
   --header-act-dropdown-bg: #2f3441;
@@ -1278,10 +1277,8 @@ html.dark {
   --footer-text: #9e9da6;
   --dropdown-bg: #2f3441;
   --dropdown-shadow: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg)
-      brightness(89%) contrast(88%);
-  --menu-column-icon: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg)
-      brightness(107%) contrast(96%);
+  --dropdown-arrow: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg) brightness(89%) contrast(88%);
+  --menu-column-icon: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg) brightness(107%) contrast(96%);
   --sidebar-bg: #292e39;
   --sidebar-shadow: rgba(23, 28, 40, 0.4);
   --cate-item-bg: #171c28;
@@ -1352,8 +1349,7 @@ html.dark {
 :root {
   --bg: #EEEEEE;
   --text-color: #1A162E;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%)
-  contrast(95%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(10%) saturate(4042%) hue-rotate(212deg) brightness(90%) contrast(95%);
   --header-bg: #eee;
   --header-act-dropdown-bg: #fff;
   --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
@@ -1370,8 +1366,7 @@ html.dark {
   --dropdown-shadow: rgba(200, 200, 200, 0.4);
   --dropdown-arrow: #fff;
   --top-menu-border: #d2d1d6;
-  --menu-column-icon: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg)
-  brightness(107%) contrast(96%);
+  --menu-column-icon: brightness(0) saturate(100%) invert(95%) sepia(6%) saturate(527%) hue-rotate(180deg) brightness(107%) contrast(96%);
   --product-card-bg: #fff;
   --product-card-shadow: rgba(237, 237, 246, 0.20);
   --product-card__brand: #9E9DA8;
@@ -1405,8 +1400,7 @@ html.dark {
   --product-info__bg:#F6F6F6;
   --product-card-border: #B9BABE;
   --product-info__like-btn__border: #D2D1D6;
-  --like-btn-shadow: rgba(124, 124, 124, 0.20)
-  // Breadcrumbs
+  --like-btn-shadow: rgba(124, 124, 124, 0.20) // Breadcrumbs
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   --product-tab__item__color: #9E9DA8;
