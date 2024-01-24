@@ -10,7 +10,7 @@
     box-shadow: 0px 40px 90px var(--filter-shadow);
     border-radius: 20px;
     position: absolute;
-    top: 48px;
+    top: 54px;
     right: 0;
     transition: opacity, visibility;
     transition-duration: 0.2s;
@@ -34,23 +34,23 @@
     }
     &__arrow {
         position: absolute;
-        top: -15px;
-        right: 24px;
+        top: -17px;
+        right: 22px;
         height: 20.5px;
         filter: var(--filter-form-arrow);
     }
 
-    &::before{
-        content: "";
-        position: absolute;
-        height: 21px;
-        width: 21px;
-        rotate: 45deg;
-        background: var(--filter-bg);
-        object-fit: cover;
-        top: -11px;
-        right: 42px;
-    }
+    // &::before{
+    //     content: "";
+    //     position: absolute;
+    //     height: 21px;
+    //     width: 21px;
+    //     rotate: 45deg;
+    //     background: var(--filter-bg);
+    //     object-fit: cover;
+    //     top: -11px;
+    //     right: 42px;
+    // }
     &__heading {
         font-size: 2.2rem;
         font-weight: 500;
@@ -144,6 +144,7 @@
             width: 121px;
             padding: 8px 12px;
             border-radius: 6px;
+            border: 1px solid var(--filter__form-input-border)
         }
         // Col 2
     
@@ -169,7 +170,7 @@
                 overflow: hidden;
                 &::placeholder {
                     font-weight: 400;
-                    color: var(--filter-form-search-color);
+                    color: var(--filter-form-search);
                 }
             }
             &__icon {
@@ -199,6 +200,7 @@
         justify-content: flex-end;
     }
     &__cancel{
+        color: var(--filter-cancel) !important;
 padding: 0;
     }
     &__submit{

@@ -27,6 +27,10 @@ button, input, textarea,select {
     color: inherit;
     outline: none;
 }
+textarea{
+    background-color: transparent;
+    border: none;
+}
 button{
     border:none;
     outline:none;

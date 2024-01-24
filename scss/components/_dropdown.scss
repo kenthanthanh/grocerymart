@@ -19,8 +19,8 @@
         padding: var(--inner-padding);
 
         border-radius: 20px;
-        background: var(--dropdown-bg-color);
-        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
+        background: var(--dropdown-bg);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
 
         &::before {
             content: url("../icons/dropdown-arrow.svg");
@@ -55,7 +55,7 @@
     &__main {
         width: var(--main-column-width);
         height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
-        border-right: 1px solid var(--top-menu-border-color);
+        border-right: 1px solid var(--top-menu-border);
         overflow-y: auto;
 
 

@@ -102,7 +102,7 @@ $error-color: #ed4337;
         line-height: 144.444%;
 
         &::placeholder {
-            color: var(--form-placeholder-color);
+            color: var(--form-placeholder);
         }
 
         @include abstracts.screen(md) {
@@ -112,10 +112,10 @@ $error-color: #ed4337;
     &__text-area-input{
         resize: none;
         overflow: auto;
+        // border: none;
+        // background-color: transparent;
     }
-    &__text-area-input:focus{
-        outline: none;
-    }
+
 
     &__input {
         &-icon {
@@ -294,24 +294,24 @@ $error-color: #ed4337;
             width: 19px;
             height: 19px;
             border-radius: 5px;
-            border: 1px solid #9e9da8;
+            border: 1px solid var(--form-checkbox__checked-border);
         }
     }
 
     &__checkbox:has(:checked) {
         &::before {
-            border-color: #ffb700;
-            background: #ffb700;
+            border-color: var(--form-checkbox-border);
+            background: var(--form-checkbox-bg);
         }
 
         &::after {
-            width: 15px;
-            height: 8px;
+            width: 11px;
+            height: 7px;
             border: 3px solid;
             border-color: transparent transparent #fff #fff;
             rotate: -45deg;
-            left: 2px;
-            top: 4px;
+            left: 4px;
+            top: 3.5px;
         }
     }
 
